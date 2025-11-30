@@ -1,0 +1,124 @@
+:root {
+    background-image: linear-gradient( to left, #26658c, #023859, #011c40 );
+}
+
+.container, .title, .content, .shownForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3ch;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    width: 100%;
+    color: #26658c;
+}
+.content {
+    width: 100%;
+    background-color: rgb( 167, 235, 242, .1);
+    padding: .8rem;
+    border: none;
+    border-radius: 1rem;
+}
+.content > #weatherBtn {
+    flex-basis: 20ch;
+    height: 4ch;
+    border-radius: .6rem;
+    border: none;
+    background-color: #011c40;
+    color: #26658c;
+}
+.content > #weatherBtn:hover, .content > #weatherBtn:focus {
+    background-color: #023859;
+    cursor: pointer;
+}
+.hiddenForm {
+    display: none;
+}
+.shownForm {
+    display: block;
+    display: flex;
+    gap: 0;
+    width: 100%;
+    justify-content: center;
+}
+.shownForm > input {
+    width: 50%;
+    height: 3.5ch;
+    border: none;
+    border-radius: .6rem .01rem .01rem .6rem;
+    background-color: #023859;
+    color: #bdc4d4;
+}
+.shownForm > input::placeholder {
+    position: relative;
+    left: 4ch;
+    color: #26658c;
+}
+.shownForm > input:focus {
+    outline: #011c40;
+    border: #011c40 2px solid;
+}
+.shownForm > button {
+    flex-basis: 10ch;
+    height: 3.8ch;
+    border-radius: .01rem .4rem .4rem .01rem;
+    border: none;
+    background-color: #011c40;
+    color: #26658c;
+}
+.shownForm > button:hover {
+    background-color: #023859;
+    cursor: pointer;
+}
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3ch;
+}
+.spinner {
+    background-color: rgb( 167, 235, 242, .1);
+}
+.weatherElement {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3ch;
+    background-color: rgb( 167, 235, 242, .1);
+    color: #7bbdbe;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .8rem;
+    width: 40vw;
+}
+.weatherElement > .weatherIcon {
+    height: 30%;
+    width: 20%;
+}
+.weatherElement > p {
+    width: 98%;
+}
+.weatherElement > h1 {
+    font-size: 5rem;
+}
+.weatherElement > img, .weatherElement > div {
+    position: relative;
+    top: 5ch;
+}
+.weatherElement > div {
+    margin-left: 3ch;
+}
+.weatherElement > button {
+    position: absolute;
+    top: 1ch;
+    right: 1ch;
+    background-color: rgb( 167, 235, 242, .1);
+    padding: .3rem;
+    border-radius: .05;
+    border: none;
+    width: 3ch;
+}
+.weatherElement > button:hover, .weatherElement > button:focus {
+    background-color: #023859;
+    cursor: pointer;
+}
