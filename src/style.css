@@ -75,6 +75,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3ch;
+    padding: 3ch 8ch;
 }
 .spinner {
     background-color: rgb( 167, 235, 242, .1);

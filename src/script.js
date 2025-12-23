@@ -24,7 +24,9 @@ async function getWeather(url, address) {
     }
     const spinner = document.querySelector('.spinner');
     spinner.remove();
-    postWeather( address, weather.datetime, weather.temp, weather.icon, weather.feelslike, weather.conditions );
+    if ( weather.temp === undefined ) {
+        postError ();
+    } else postWeather( address, weather.datetime, weather.temp, weather.icon, weather.feelslike, weather.conditions )
         
 }
 function postWeather ( addressData, timeData, tempData, iconName, feelslikeData, conditionsData ) {
@@ -60,6 +62,9 @@ function postWeather ( addressData, timeData, tempData, iconName, feelslikeData,
     miniDIv.append( conditions, feelslike );
     div.append( address, time, svgHolder, temp, miniDIv, closeBtn );
     content.appendChild ( div );
+}
+function postError () {
+    alert ( 'Something Went Wrong :( ' );
 }
 function loadingScreen () {
     let spinner = document.createElement('img');
